@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Rosicki</title>
+</head>
+<body>
+   <textarea cols="70" rows="30">
+    <html>
+        <head>
+           <script type="text/javascript">
+              function pociag(powierzchnia,miasto,dzielnica)//początek konstruktora
+              {
+              this.powierzchnia=powierzchnia;
+              this.dzielnica=dzielnica;
+              this.miasto=miasto;
+              }//koniec konstruktora
+        
+              pociag.prototype.wypisz = function () //definicja metody
+              {
+              alert(this.powierzchnia + ' ' + this.dzielnica+ ' ' + this.miasto);
+              };
+        
+              var dom1 = new pociag("100m2", "Warszawa", "Bemowo"); // nowy obiekt osoba1
+              var dom2 = new pociag('50m2', 'Gdańsk', 'Śródmiescie');
+              dom1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+              dom2.wypisz();
+              document.write("dostęp do właściwości"+"<br>");
+              // poniżej dostęp do pól osoby
+              document.write("dom 1"+" &nbsp;powierzchnia: "+dom1.powierzchnia+" &nbsp;dzielnica: "+dom1.miasto+" &nbsp;dzielnica: "+dom1.dzielnica+"<br>");
+              document.write("dom 2"+" &nbsp;powierzchnia: "+dom2.powierzchnia+" &nbsp;dzielnica: "+dom2.miasto+" &nbsp;dzielnica: "+dom2.dzielnica+"<br>");
+           </script>
+        </head>
+        <body>
+           <br>
+           programowanie obiektowe
+        </body>
+        </html>
+   </textarea>
+</body>
+</html>
